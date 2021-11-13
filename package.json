@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "buildcss": "tailwindcss build -i src/styles.css -o public/styles.css"
+    "buildcss": "tailwindcss build -i src/styles.css -o docs/styles.css"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/skylotusstudios/skylotusstudios#readme",
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.3.0",
+    "@tailwindcss/forms": "^0.3.4",
     "tailwindcss": "^2.2.19"
   }
 }
