@@ -1,0 +1,23 @@
+{
+  "name": "skylotusstudios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "buildcss": "tailwindcss build -i src/styles.css -o public/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skylotusstudios/skylotusstudios.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skylotusstudios/skylotusstudios/issues"
+  },
+  "homepage": "https://github.com/skylotusstudios/skylotusstudios#readme",
+  "dependencies": {
+    "tailwindcss": "^2.2.19"
+  }
+}
