@@ -1,10 +1,10 @@
 {
   "name": "skylotusstudios",
   "version": "1.0.0",
-  "description": "",
+  "description": "Hello Everyone!",
   "main": "index.js",
   "scripts": {
-    "buildcss": "tailwindcss build -i src/styles.css -o docs/styles.css"
+    "build": "tailwindcss -i ./src/input.css -o ./docs/style.css --watch"
   },
   "repository": {
     "type": "git",
@@ -17,10 +17,10 @@
     "url": "https://github.com/skylotusstudios/skylotusstudios/issues"
   },
   "homepage": "https://github.com/skylotusstudios/skylotusstudios#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.3.5"
+  },
   "dependencies": {
-    "@tailwindcss/aspect-ratio": "^0.3.0",
-    "@tailwindcss/forms": "^0.3.4",
-    "live-server": "^1.2.1",
-    "tailwindcss": "^2.2.19"
+    "@tailwindcss/forms": "^0.5.6"
   }
 }

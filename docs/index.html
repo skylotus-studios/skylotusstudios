@@ -1,540 +1,284 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Sky Lotus Studios</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Skylotus Studios</title>
+    <link href="/docs/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
-
 <body>
-    <div class="bg-white">
-        <div class="relative overflow-hidden">
-          <header class="relative">
-            <div class="bg-gray-900 pt-6">
-              <nav class="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6" aria-label="Global">
-                <div class="flex items-center flex-1">
-                  <div class="flex items-center justify-between w-full md:w-auto">
-                    <a href="#">
-                      <span class="sr-only">Workflow</span>
-                      <img class="h-8 w-auto sm:h-10" src="img/logoicon.png" alt="">
+    <nav class="bg-dark shadow-2xl fixed top-0 w-full z-10">
+        <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
+            <div class="flex h-16 justify-between">
+                <div class="flex px-2 lg:px-0">
+                    <div class="flex flex-shrink-0 items-center">
+                        <img class="h-8 w-auto" src="img/SkylotusTransparent400x400.png" alt="Your Company">
+                    </div>
+                    <div class="hidden lg:ml-6 lg:flex lg:space-x-8">
+                        <a href="#about" class="inline-flex items-center border-b-2 border-skyblue px-1 pt-1 text-sm font-medium text-whitish hover:text-skyblue">About</a>
+                        <a href="#engine" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-whitish hover:border-skyblue hover:text-skyblue">Engine</a>
+                        <a href="#games" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-whitish hover:border-skyblue hover:text-skyblue">Games</a>
+                        <a href="#press" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-whitish hover:border-skyblue hover:text-skyblue">Press Kit</a>
+                    </div>
+                </div>
+                <div class="hidden lg:flex">
+                    <a href="#email" class="bg-light text-whitish my-4 px-4 py-2 hover:bg-skyblue hover:text-whitish transition duration-150 ease-in-out leading-none">
+                        Sign Up
                     </a>
-                    <div class="-mr-2 flex items-center md:hidden">
-                      <button type="button" class="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white" aria-expanded="false">
+                </div>
+                <div class="flex items-center lg:hidden">
+                <!-- Mobile menu button -->
+                    <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skyblue" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
                         <span class="sr-only">Open main menu</span>
-                        <!-- Heroicon name: outline/menu -->
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+
+                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
-                      </button>
-                    </div>
-                  </div>
-                  
-                </div>
-                <div class="hidden md:flex md:items-center md:space-x-6">
-                  <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700">
-                    Notify Me
-                  </a>
-                </div>
-              </nav>
-            </div>
-      
-            <!--
-              Mobile menu, show/hide based on menu open state.
-      
-              Entering: "duration-150 ease-out"
-                From: "opacity-0 scale-95"
-                To: "opacity-100 scale-100"
-              Leaving: "duration-100 ease-in"
-                From: "opacity-100 scale-100"
-                To: "opacity-0 scale-95"
-            -->
-            <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top md:hidden">
-              <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
-                <div class="px-5 pt-4 flex items-center justify-between">
-                  <div>
-                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-teal-500-cyan-600.svg" alt="">
-                  </div>
-                  <div class="-mr-2">
-                    <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600">
-                      <span class="sr-only">Close menu</span>
-                      <!-- Heroicon name: outline/x -->
-                      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                      </svg>
+
+                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
                     </button>
-                  </div>
                 </div>
-                <div class="pt-5 pb-6">
-                  <div class="mt-6 px-5">
-                    <a href="#" class="block text-center w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-medium hover:from-teal-600 hover:to-cyan-700">Start free trial</a>
-                  </div>
-                  <div class="mt-6 px-5">
-                    <p class="text-center text-base font-medium text-gray-500">Existing customer? <a href="#" class="text-gray-900 hover:underline">Login</a></p>
-                  </div>
-                </div>
-              </div>
+                
             </div>
-          </header>
-          <main>
-            <div class="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
-              <div class="mx-auto max-w-7xl lg:px-8">
-                <div class="lg:grid lg:grid-cols-2 lg:gap-8">
-                  <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
-                    <div class="lg:py-24">
-                      <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                        <span class="block">sky lotus</span>
-                        <span class="pb-3 block bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400 text-5xl sm:pb-5">s t u d i o s</span>
-                      </h1>
-                      <p class="text-base text-gray-300 sm:text-xl lg:text-lg xl:text-xl">
-                        This website is still being built. Thanks for checking us out! Sign up below if interested in knowing when the site is up.
-                      </p>
-                      <div class="mt-10 sm:mt-12">
-                        <form action="#" class="sm:max-w-xl sm:mx-auto lg:mx-0">
-                          <div class="sm:flex">
-                            <div class="min-w-0 flex-1">
-                              <label for="email" class="sr-only">Email address</label>
-                              <input id="email" type="email" placeholder="Enter your email" class="block w-full px-4 py-3 rounded-md border-0 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900">
-                            </div>
-                            <div class="mt-3 sm:mt-0 sm:ml-3">
-                              <button type="submit" class="block w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-medium hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900">Notify Me</button>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
-                    <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
-                      <!-- Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ -->
-                      <img class="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none" src="https://tailwindui.com/img/component-images/cloud-illustration-teal-cyan.svg" alt="">
-                    </div>
-                  </div>
-                </div>
-              </div>
+        </div>
+    
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="lg:hidden" id="mobile-menu">
+            <div class="space-y-1 pb-3 pt-2">
+                <a href="#about" class="block border-l-4 border-gray-300 bg-skyblue py-2 pl-3 pr-4 text-base font-medium text-white hover:text-white">About</a>
+                <a href="#engine" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-whitish hover:border-gray-300 hover:bg-skyblue hover:text-white">Engine</a>
+                <a href="#games" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-whitish hover:border-gray-300 hover:bg-skyblue hover:text-white">Games</a>
+                <a href="#press" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-whitish hover:border-gray-300 hover:bg-skyblue hover:text-white">Press Kit</a>
+                <a href="#email" class="block bg-light text-whitish mt-2 mx-8 px-4 py-2 text-center hover:bg-skyblue hover:text-whitish transition duration-150 ease-in-out">
+                    Sign Up
+                </a>
             </div>
-      
-            <!-- Feature section with screenshot -->
-            <div class="relative bg-gray-50 pt-16 sm:pt-24 lg:pt-32">
-              <div class="mx-auto max-w-md px-4 text-center sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
-                <div>
-                  <h2 class="text-base font-semibold tracking-wider text-cyan-600 uppercase">Serverless</h2>
-                  <p class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-                    No server? No problem.
-                  </p>
-                  <p class="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-                    Phasellus lorem quam molestie id quisque diam aenean nulla in. Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend condimentum id viverra nulla.
-                  </p>
-                </div>
-                <div class="mt-12 -mb-10 sm:-mb-24 lg:-mb-80">
-                  <img class="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5" src="https://tailwindui.com/img/component-images/green-project-app-screenshot.jpg" alt="">
-                </div>
-              </div>
-            </div>
-      
-            <!-- Feature section with grid -->
-            <div class="relative bg-white py-16 sm:py-24 lg:py-32">
-              <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-                <h2 class="text-base font-semibold tracking-wider text-cyan-600 uppercase">Deploy faster</h2>
-                <p class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-                  Everything you need to deploy your app
-                </p>
-                <p class="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-                  Phasellus lorem quam molestie id quisque diam aenean nulla in. Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend condimentum id viverra nulla.
-                </p>
-                <div class="mt-12">
-                  <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                    <div class="pt-6">
-                      <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
-                        <div class="-mt-6">
-                          <div>
-                            <span class="inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-md shadow-lg">
-                              <!-- Heroicon name: outline/cloud-upload -->
-                              <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-                              </svg>
-                            </span>
-                          </div>
-                          <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Push to Deploy</h3>
-                          <p class="mt-5 text-base text-gray-500">
-                            Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi vitae lobortis.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-      
-                    <div class="pt-6">
-                      <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
-                        <div class="-mt-6">
-                          <div>
-                            <span class="inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-md shadow-lg">
-                              <!-- Heroicon name: outline/lock-closed -->
-                              <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                              </svg>
-                            </span>
-                          </div>
-                          <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">SSL Certificates</h3>
-                          <p class="mt-5 text-base text-gray-500">
-                            Qui aut temporibus nesciunt vitae dicta repellat sit dolores pariatur. Temporibus qui illum aut.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-      
-                    <div class="pt-6">
-                      <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
-                        <div class="-mt-6">
-                          <div>
-                            <span class="inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-md shadow-lg">
-                              <!-- Heroicon name: outline/refresh -->
-                              <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                              </svg>
-                            </span>
-                          </div>
-                          <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Simple Queues</h3>
-                          <p class="mt-5 text-base text-gray-500">
-                            Rerum quas incidunt deleniti quaerat suscipit mollitia. Amet repellendus ut odit dolores qui.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-      
-                    <div class="pt-6">
-                      <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
-                        <div class="-mt-6">
-                          <div>
-                            <span class="inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-md shadow-lg">
-                              <!-- Heroicon name: outline/shield-check -->
-                              <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                              </svg>
-                            </span>
-                          </div>
-                          <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Advanced Security</h3>
-                          <p class="mt-5 text-base text-gray-500">
-                            Ullam laboriosam est voluptatem maxime ut mollitia commodi. Et dignissimos suscipit perspiciatis.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-      
-                    <div class="pt-6">
-                      <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
-                        <div class="-mt-6">
-                          <div>
-                            <span class="inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-md shadow-lg">
-                              <!-- Heroicon name: outline/cog -->
-                              <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                              </svg>
-                            </span>
-                          </div>
-                          <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Powerful API</h3>
-                          <p class="mt-5 text-base text-gray-500">
-                            Ab a facere voluptatem in quia corrupti veritatis aliquam. Veritatis labore quaerat ipsum quaerat id.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-      
-                    <div class="pt-6">
-                      <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
-                        <div class="-mt-6">
-                          <div>
-                            <span class="inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-md shadow-lg">
-                              <!-- Heroicon name: outline/server -->
-                              <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
-                              </svg>
-                            </span>
-                          </div>
-                          <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">Database Backups</h3>
-                          <p class="mt-5 text-base text-gray-500">
-                            Quia qui et est officia cupiditate qui consectetur. Ratione similique et impedit ea ipsum et.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Testimonial section -->
-            <div class="pb-16 bg-gradient-to-r from-teal-500 to-cyan-600 lg:pb-0 lg:z-10 lg:relative">
-              <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8">
-                <div class="relative lg:-my-8">
-                  <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"></div>
-                  <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
-                    <div class="aspect-w-10 aspect-h-6 rounded-xl shadow-xl overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
-                      <img class="object-cover lg:h-full lg:w-full" src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" alt="">
-                    </div>
-                  </div>
-                </div>
-                <div class="mt-12 lg:m-0 lg:col-span-2 lg:pl-8">
-                  <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:px-0 lg:py-20 lg:max-w-none">
-                    <blockquote>
-                      <div>
-                        <svg class="h-12 w-12 text-white opacity-25" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
-                          <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
-                        </svg>
-                        <p class="mt-6 text-2xl font-medium text-white">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.
-                        </p>
-                      </div>
-                      <footer class="mt-6">
-                        <p class="text-base font-medium text-white">Judith Black</p>
-                        <p class="text-base font-medium text-cyan-100">CEO at PureInsights</p>
-                      </footer>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Blog section -->
-            <div class="relative bg-gray-50 py-16 sm:py-24 lg:py-32">
-              <div class="relative">
-                <div class="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-                  <h2 class="text-base font-semibold tracking-wider text-cyan-600 uppercase">Learn</h2>
-                  <p class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-                    Helpful Resources
-                  </p>
-                  <p class="mt-5 mx-auto max-w-prose text-xl text-gray-500">
-                    Phasellus lorem quam molestie id quisque diam aenean nulla in. Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend condimentum id viverra nulla.
-                  </p>
-                </div>
-                <div class="mt-12 mx-auto max-w-md px-4 grid gap-8 sm:max-w-lg sm:px-6 lg:px-8 lg:grid-cols-3 lg:max-w-7xl">
-                  <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                    <div class="flex-shrink-0">
-                      <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="">
-                    </div>
-                    <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                      <div class="flex-1">
-                        <p class="text-sm font-medium text-cyan-600">
-                          <a href="#" class="hover:underline">
-                            Article
-                          </a>
-                        </p>
-                        <a href="#" class="block mt-2">
-                          <p class="text-xl font-semibold text-gray-900">
-                            Boost your conversion rate
-                          </p>
-                          <p class="mt-3 text-base text-gray-500">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.
-                          </p>
-                        </a>
-                      </div>
-                      <div class="mt-6 flex items-center">
-                        <div class="flex-shrink-0">
-                          <a href="#">
-                            <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Roel Aufderehar">
-                          </a>
-                        </div>
-                        <div class="ml-3">
-                          <p class="text-sm font-medium text-gray-900">
-                            <a href="#" class="hover:underline">
-                              Roel Aufderehar
-                            </a>
-                          </p>
-                          <div class="flex space-x-1 text-sm text-gray-500">
-                            <time datetime="2020-03-16">
-                              Mar 16, 2020
-                            </time>
-                            <span aria-hidden="true">
-                              &middot;
-                            </span>
-                            <span>
-                              6 min read
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-      
-                  <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                    <div class="flex-shrink-0">
-                      <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="">
-                    </div>
-                    <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                      <div class="flex-1">
-                        <p class="text-sm font-medium text-cyan-600">
-                          <a href="#" class="hover:underline">
-                            Video
-                          </a>
-                        </p>
-                        <a href="#" class="block mt-2">
-                          <p class="text-xl font-semibold text-gray-900">
-                            How to use search engine optimization to drive sales
-                          </p>
-                          <p class="mt-3 text-base text-gray-500">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.
-                          </p>
-                        </a>
-                      </div>
-                      <div class="mt-6 flex items-center">
-                        <div class="flex-shrink-0">
-                          <a href="#">
-                            <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Brenna Goyette">
-                          </a>
-                        </div>
-                        <div class="ml-3">
-                          <p class="text-sm font-medium text-gray-900">
-                            <a href="#" class="hover:underline">
-                              Brenna Goyette
-                            </a>
-                          </p>
-                          <div class="flex space-x-1 text-sm text-gray-500">
-                            <time datetime="2020-03-10">
-                              Mar 10, 2020
-                            </time>
-                            <span aria-hidden="true">
-                              &middot;
-                            </span>
-                            <span>
-                              4 min read
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-      
-                  <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                    <div class="flex-shrink-0">
-                      <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="">
-                    </div>
-                    <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                      <div class="flex-1">
-                        <p class="text-sm font-medium text-cyan-600">
-                          <a href="#" class="hover:underline">
-                            Case Study
-                          </a>
-                        </p>
-                        <a href="#" class="block mt-2">
-                          <p class="text-xl font-semibold text-gray-900">
-                            Improve your customer experience
-                          </p>
-                          <p class="mt-3 text-base text-gray-500">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.
-                          </p>
-                        </a>
-                      </div>
-                      <div class="mt-6 flex items-center">
-                        <div class="flex-shrink-0">
-                          <a href="#">
-                            <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Daniela Metz">
-                          </a>
-                        </div>
-                        <div class="ml-3">
-                          <p class="text-sm font-medium text-gray-900">
-                            <a href="#" class="hover:underline">
-                              Daniela Metz
-                            </a>
-                          </p>
-                          <div class="flex space-x-1 text-sm text-gray-500">
-                            <time datetime="2020-02-12">
-                              Feb 12, 2020
-                            </time>
-                            <span aria-hidden="true">
-                              &middot;
-                            </span>
-                            <span>
-                              11 min read
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-      
-            <!-- CTA Section -->
-            <div class="relative bg-gray-900">
-              <div class="relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
-                <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&sat=-100" alt="">
-                <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-r from-teal-500 to-cyan-600 mix-blend-multiply"></div>
-              </div>
-              <div class="relative mx-auto max-w-md px-4 py-12 sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-32">
-                <div class="md:ml-auto md:w-1/2 md:pl-10">
-                  <h2 class="text-base font-semibold uppercase tracking-wider text-gray-300">
-                    Award winning support
-                  </h2>
-                  <p class="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
-                    We’re here to help
-                  </p>
-                  <p class="mt-3 text-lg text-gray-300">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat quisque ut interdum tincidunt duis.
-                  </p>
-                  <div class="mt-8">
-                    <div class="inline-flex rounded-md shadow">
-                      <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50">
-                        Visit the help center
-                        <!-- Heroicon name: solid/external-link -->
-                        <svg class="-mr-1 ml-3 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
-                          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </main>
-          <footer class="bg-gray-50" aria-labelledby="footer-heading">
-            <h2 id="footer-heading" class="sr-only">Footer</h2>
-            <div class="max-w-md mx-auto pt-12 px-4 sm:max-w-7xl sm:px-6 lg:pt-16 lg:px-8">
-              <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-                <div class="space-y-8 xl:col-span-1">
-                  <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-gray-500">
-                      <span class="sr-only">Facebook</span>
-                      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+        </div>
+    </nav>
+    <div class="relative mt-16 isolate flex items-center gap-x-6 overflow-hidden bg-white px-6 py-8 sm:px-3.5 sm:before:flex-1">
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+          <p class="text-lg leading-6 text-light">
+            <strong class="font-bold">Follow Updates</strong><svg viewBox="0 0 2 2" class="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg><span class="text-dark text-md">Get the FREE demo when it's ready and join us on Discord to see what’s coming next.</span>
+          </p>
+          <a href="#email" class="flex-none bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900">Sign Up For Demo!</a>
+          <a href="https://discord.gg/YAD6SzMF" class="flex-none bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900">Join Discord!</a>
+        </div>
+        <div class="flex flex-1 justify-end">
+          <button type="button" class="-m-3 p-3 focus-visible:outline-offset-[-4px]">
+            <span class="sr-only">Dismiss</span>
+            <svg class="h-5 w-5 text-gray-900" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+            </svg>
+          </button>
+        </div>
+    </div>
+    <div class="relative">
+        <img src="img/SkylotusTextLogo2023.png" alt="logo" class="w-full">
+        <div class="absolute top-0 left-0 w-full h-full opacity-30 bg-gradient-radial from-white to-black"></div>
+    </div>
+
+    <div id="about" class="bg-dark py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 text-center lg:px-8">
+          <div class="mx-auto max-w-2xl">
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">&nbsp;&nbsp;About Us <span class="text-base font-semibold leading-7 text-skyblue">&nbsp;??</span></h2>
+            <p class="mt-4 text-lg leading-8 text-whitish">You gaze up at the blue skies, and a burning question enters your mind: Does a world exist where lotuses bloom among the clouds? This realm of imagination led to the conception of Skylotus Studios, an indie video game sanctuary where the universe is limitless. Orchestrated by the elusive Director Ink, this developer hub, seemingly a sprawling empire, is really a cozy one-man wonderland. The studio works tirelessly to craft the technological foundations for its fun and vibrant worlds filled with cartoonish charm. With every pixel a playful secret waiting to be unraveled, the invitation to wonder is yours to claim.
+                <br/><br/>
+                <span class="font-bold text-light">Hurry, and welcome. Adventure awaits.</span></p>
+          </div>
+          <ul role="list" class="mx-auto mt-20 grid max-w-sm">
+            <li class="bg-skyblue px-8 py-10">
+              <img class="mx-auto h-48 w-48 rounded-full md:h-56 md:w-56" src="img/directorink.png" alt="">
+              <h3 class="mt-6 text-3xl font-bold tracking-tight text-white">Director Ink</h3>
+              <p class="text-xl font-bold text-light text-">Studio Lead</p>
+              <ul role="list" class="mt-6 flex justify-center gap-x-6">
+                <li>
+                  <a href="https://twitter.com/SkylotusStudios" class="text-dark hover:text-light">
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                      <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                    </svg>
+                    <span class="sr-only">Twitter</span>
+                  </a>
+                </li>
+                <li>
+                    <a href="https://discord.gg/YAD6SzMF" class="text-dark hover:text-light">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-7 w-7" viewBox="0 0 20 20" aria-hidden="true">
+                        <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
                       </svg>
+                      <span class="sr-only">Discord</span>
                     </a>
+                </li>
+              </ul>
+            </li>
       
-                    <a href="#" class="text-gray-400 hover:text-gray-500">
-                      <span class="sr-only">Instagram</span>
-                      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
-                      </svg>
-                    </a>
-      
-                    <a href="#" class="text-gray-400 hover:text-gray-500">
-                      <span class="sr-only">Twitter</span>
-                      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                      </svg>
-                    </a>
-      
-                    <a href="#" class="text-gray-400 hover:text-gray-500">
-                      <span class="sr-only">GitHub</span>
-                      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="mt-12 border-t border-gray-200 py-8">
-                <p class="text-base text-gray-400 xl:text-center">
-                  &copy; 2021 Sky Lotus Studios. All rights reserved.
-                </p>
-              </div>
-            </div>
-          </footer>
+            <!-- More people... -->
+          </ul>
         </div>
       </div>
+      
+    <div class="relative" id="email">
+        <img src="img/topdowntoon.png" alt="background" class="w-full">
+        <div class="absolute top-0 left-0 w-full h-full bg-opacity-90 bg-black">
+            <div class="lg:mt-64 py-16 sm:py-24">
+                <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+                <div class="relative isolate flex flex-col gap-10 overflow-hidden bg-dark px-6 py-24 shadow-2xl sm:px-24 xl:flex-row xl:items-center xl:py-32">
+                    <h2 class="max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl xl:max-w-none xl:flex-auto">Get free game demos, <br/>early access, and updates!</h2>
+                    <form action="https://gmail.us21.list-manage.com/subscribe/post?u=3fe426fcb0812549621b9c282&amp;id=444de94214&amp;f_id=006ce4e6f0&c=?" method="post" class="w-full max-w-md">
+                    <div class="flex gap-x-4">
+                        <label for="email-address" class="sr-only">Email address</label>
+                        <input id="email-address" name="email" type="email" autocomplete="email" required class="placeholder-whitish min-w-0 flex-auto border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-skyblue sm:text-sm sm:leading-6" placeholder="Enter your email">
+                        <button type="submit" class="flex-none bg-light px-3.5 py-2.5 text-sm font-semibold text-whitish shadow-sm hover:bg-skyblue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Notify Me</button>
+                    </div>
+                    <p class="mt-4 text-sm leading-6 text-whitish">We promise to never spam you or steal your data. <br/>For more details, read our <a href="privacypolicy.html" class="font-bold text-skyblue">privacy&nbsp;policy</a>.</p>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="bg-dark py-24 sm:py-32" id="engine">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl sm:text-center">
+            
+            <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Toon Engine <span class="text-base font-semibold leading-7 text-skyblue">&nbsp;v0.1</span></p>
+            
+            <p class="mt-6 text-lg leading-8 text-gray-300">This game engine is a work in progress. It is being built from scratch.</p>
+          </div>
+        </div>
+        <div class="relative overflow-hidden pt-16">
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <img src="img/enginescreenshot.png" alt="App screenshot" class="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-white/10" width="2432" height="1442">
+            <div class="relative" aria-hidden="true">
+              <div class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-dark pt-[7%]"></div>
+            </div>
+          </div>
+        </div>
+        <div class="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
+          <dl class="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-white">
+                <svg class="absolute left-1 top-1 h-5 w-5 text-skyblue" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 2c-2.236 0-4.43.18-6.57.524C1.993 2.755 1 4.014 1 5.426v5.148c0 1.413.993 2.67 2.43 2.902 1.168.188 2.352.327 3.55.414.28.02.521.18.642.413l1.713 3.293a.75.75 0 001.33 0l1.713-3.293a.783.783 0 01.642-.413 41.102 41.102 0 003.55-.414c1.437-.231 2.43-1.49 2.43-2.902V5.426c0-1.413-.993-2.67-2.43-2.902A41.289 41.289 0 0010 2zM6.75 6a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5zm0 2.5a.75.75 0 000 1.5h3.5a.75.75 0 000-1.5h-3.5z" clip-rule="evenodd" />
+                </svg>     
+                Multiplayer Support.
+              </dt>
+              <dd class="inline text-light">Built to handle servers so you can play with friends.</dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-white">
+                <svg class="absolute left-1 top-1 h-5 w-5 text-skyblue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path d="M16.555 5.412a8.028 8.028 0 00-3.503-2.81 14.899 14.899 0 011.663 4.472 8.547 8.547 0 001.84-1.662zM13.326 7.825a13.43 13.43 0 00-2.413-5.773 8.087 8.087 0 00-1.826 0 13.43 13.43 0 00-2.413 5.773A8.473 8.473 0 0010 8.5c1.18 0 2.304-.24 3.326-.675zM6.514 9.376A9.98 9.98 0 0010 10c1.226 0 2.4-.22 3.486-.624a13.54 13.54 0 01-.351 3.759A13.54 13.54 0 0110 13.5c-1.079 0-2.128-.127-3.134-.366a13.538 13.538 0 01-.352-3.758zM5.285 7.074a14.9 14.9 0 011.663-4.471 8.028 8.028 0 00-3.503 2.81c.529.638 1.149 1.199 1.84 1.66zM17.334 6.798a7.973 7.973 0 01.614 4.115 13.47 13.47 0 01-3.178 1.72 15.093 15.093 0 00.174-3.939 10.043 10.043 0 002.39-1.896zM2.666 6.798a10.042 10.042 0 002.39 1.896 15.196 15.196 0 00.174 3.94 13.472 13.472 0 01-3.178-1.72 7.973 7.973 0 01.615-4.115zM10 15c.898 0 1.778-.079 2.633-.23a13.473 13.473 0 01-1.72 3.178 8.099 8.099 0 01-1.826 0 13.47 13.47 0 01-1.72-3.178c.855.151 1.735.23 2.633.23zM14.357 14.357a14.912 14.912 0 01-1.305 3.04 8.027 8.027 0 004.345-4.345c-.953.542-1.971.981-3.04 1.305zM6.948 17.397a8.027 8.027 0 01-4.345-4.345c.953.542 1.971.981 3.04 1.305a14.912 14.912 0 001.305 3.04z" />
+                </svg>                  
+                Cross Platform.
+              </dt>
+              <dd class="inline text-light">Aiming for release on Windows, Linux, and Mac. Consoles TBD.</dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-white">
+                <svg class="absolute left-1 top-1 h-5 w-5 text-skyblue" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path d="M1 12.5A4.5 4.5 0 005.5 17H15a4 4 0 001.866-7.539 3.504 3.504 0 00-4.504-4.272A4.5 4.5 0 004.06 8.235 4.502 4.502 0 001 12.5z" />
+                </svg>                      
+                Low Overhead.
+              </dt>
+              <dd class="inline text-light">Minimal bloat and no wasted data compared to general-purpose engines.</dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-white">
+                <svg class="absolute left-1 top-1 h-5 w-5 text-skyblue" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 1c-1.716 0-3.408.106-5.07.31C3.806 1.45 3 2.414 3 3.517V16.75A2.25 2.25 0 005.25 19h9.5A2.25 2.25 0 0017 16.75V3.517c0-1.103-.806-2.068-1.93-2.207A41.403 41.403 0 0010 1zM5.99 8.75A.75.75 0 016.74 8h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75v-.01zm.75 1.417a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75v-.01a.75.75 0 00-.75-.75h-.01zm-.75 2.916a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75v-.01zm.75 1.417a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75v-.01a.75.75 0 00-.75-.75h-.01zm1.417-5.75a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75v-.01zm.75 1.417a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75v-.01a.75.75 0 00-.75-.75h-.01zm-.75 2.916a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75v-.01zm.75 1.417a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75v-.01a.75.75 0 00-.75-.75h-.01zm1.42-5.75a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75v-.01zm.75 1.417a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75v-.01a.75.75 0 00-.75-.75h-.01zm-.75 2.916a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75v-.01zm.75 1.417a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75v-.01a.75.75 0 00-.75-.75h-.01zM12.5 8.75a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75v-.01zm.75 1.417a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75v-.01a.75.75 0 00-.75-.75h-.01zm0 2.166a.75.75 0 01.75.75v2.167a.75.75 0 11-1.5 0v-2.167a.75.75 0 01.75-.75zM6.75 4a.75.75 0 00-.75.75v.5c0 .414.336.75.75.75h6.5a.75.75 0 00.75-.75v-.5a.75.75 0 00-.75-.75h-6.5z" clip-rule="evenodd" />
+                </svg>
+                      
+                Precise Gameplay.
+              </dt>
+              <dd class="inline text-light">Math/physics calculated from the ground up for a smooth experience.</dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-white">
+                <svg class="absolute left-1 top-1 h-5 w-5 text-skyblue" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path d="M15.993 1.385a1.87 1.87 0 012.623 2.622l-4.03 5.27a12.749 12.749 0 01-4.237 3.562 4.508 4.508 0 00-3.188-3.188 12.75 12.75 0 013.562-4.236l5.27-4.03zM6 11a3 3 0 00-3 3 .5.5 0 01-.72.45.75.75 0 00-1.035.931A4.001 4.001 0 009 14.004V14a3.01 3.01 0 00-1.66-2.685A2.99 2.99 0 006 11z" />
+                </svg>     
+                Stylized Art.
+              </dt>
+              <dd class="inline text-light">Built with shaders to support 'cel-shaded' cartoon art in 3D space.</dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-white">
+                <svg class="absolute left-1 top-1 h-5 w-5 text-skyblue" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M4.606 12.97a.75.75 0 01-.134 1.051 2.494 2.494 0 00-.93 2.437 2.494 2.494 0 002.437-.93.75.75 0 111.186.918 3.995 3.995 0 01-4.482 1.332.75.75 0 01-.461-.461 3.994 3.994 0 011.332-4.482.75.75 0 011.052.134z" clip-rule="evenodd" />
+                    <path fill-rule="evenodd" d="M5.752 12A13.07 13.07 0 008 14.248v4.002c0 .414.336.75.75.75a5 5 0 004.797-6.414 12.984 12.984 0 005.45-10.848.75.75 0 00-.735-.735 12.984 12.984 0 00-10.849 5.45A5 5 0 001 11.25c.001.414.337.75.751.75h4.002zM13 9a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                </svg>   
+                Highly Performant.
+              </dt>
+              <dd class="inline text-light">Optimized for Skylotus games, so should run well on most devices.</dd>
+            </div>
+          </dl>
+        </div>
+    </div>
+
+    <div class="relative" id="games">
+        <img src="img/cards.png" alt="background" class="w-full">
+        <div class="absolute top-0 left-0 w-full h-full bg-opacity-90 bg-black flex flex-col justify-center items-center">
+            <div class="mx-auto max-w-2xl sm:text-center">
+            
+                <p class="mt-48 text-3xl font-bold tracking-tight text-white sm:text-4xl">Accounts of Abydos <span class="text-base font-semibold leading-7 text-skyblue">&nbsp;v0.1</span></p>
+                
+                <p class="mt-6 text-lg leading-8 text-gray-300">This game is a work in progress. Please wishlist on steam!</p>
+            </div>
+            <div class="mt-6">
+                <iframe src="https://store.steampowered.com/widget/1723030/?t=This%20economy%20based%20card%20game%20pits%20your%20strategic%20skills%20against%20friends%2C%20family%2C%20and%20other%20players%20online!%20Just%20hop%20in%2C%20create%20or%20join%20a%20room%2C%20and%20fight%20to%20amass%20the%20mountains%20of%20gold%20contained%20in%20the%20Ancient%20Egyptian%20City%20of%20Abydos!" frameborder="0" width="646" height="190"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-dark" id="press">
+        <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Press Kit <span class="text-base font-semibold leading-7 text-skyblue">&nbsp;v0.1</span></h2>
+            <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-whitish">To Be Constructed.</p>
+            <div class="mt-10 flex items-center justify-center gap-x-6">
+              <a href="#press" class="bg-light px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-skyblue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-skyblue">Get Kit (Does Nothing Right Now)</a>
+            </div>
+          </div>
+        </div>
+    </div>  
+      
+    <footer class="bg-dark shadow-2xl">
+        <div class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
+          <div class="flex justify-center space-x-6 md:order-2">
+            <a class="text-skyblue hover:text-light">
+              <span class="sr-only">Instagram</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+              </svg>
+            </a>
+            <a href="https://twitter.com/SkylotusStudios" class="text-skyblue hover:text-light">
+              <span class="sr-only">Twitter</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+              </svg>
+            </a>
+            <a href="https://discord.gg/YAD6SzMF" class="text-skyblue hover:text-light">
+                <span class="sr-only">Discord</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-7 w-7" viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+                </svg>
+            </a>
+          </div>
+          <div class="mt-8 md:order-1 md:mt-0">
+            <p class="text-center text-sm leading-5 text-whitish">&copy; 2023 Skylotus Studios. All rights reserved.</p>
+          </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="mailchimp.js"></script>
+    <script src="navbar.js"></script>
 </body>
-
 </html>
+

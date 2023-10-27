@@ -1,21 +1,24 @@
-const colors = require('tailwindcss/colors')
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  content: ["./docs/*.{html,js}"],
   theme: {
     extend: {
-      colors: {
-        teal: colors.teal,
-        cyan: colors.cyan,
+      colors:{
+        skyblue: '#90ccef',
+        whitish: '#f3f3f4',
+        dark: '#0B3C49',
+        light: '#6CAE75',
       },
+      fontFamily: {
+        'sans': ['Noto Sans', 'sans-serif']
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      }
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [
     require('@tailwindcss/forms'),
-    require('@tailwindcss/aspect-ratio'),
   ],
 }
+
