@@ -1,3 +1,1 @@
-Hello Everyone!
-
-We are a game development company newly founded to make 2D games! Welcome to our GitHub :)
+You gaze up at the blue skies, and a burning question enters your mind: Does a world exist where lotuses bloom among the clouds? This realm of imagination led to the conception of Skylotus Studios, an indie video game sanctuary where the universe is limitless. Orchestrated by the elusive Director Ink, this developer hub, seemingly a sprawling empire, is really a cozy one-man wonderland. The studio works tirelessly to craft the technological foundations for its fun and vibrant worlds filled with cartoonish charm. With every pixel a playful secret waiting to be unraveled, the invitation to wonder is yours to claim.
