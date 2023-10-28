@@ -32,3 +32,61 @@ window.addEventListener('resize', function() {
         closeIcon.classList.add('hidden');
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    let navLinks = document.querySelectorAll('nav a[href^="#"]');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.forEach(nav => {
+                nav.classList.remove('border-skyblue');
+                nav.classList.add('border-transparent');
+            });
+
+            this.classList.remove('border-transparent');
+            this.classList.add('border-skyblue');
+        });
+    });
+});
+
+function getVisibleSection() {
+    const sections = document.querySelectorAll('section[id]');
+
+    let closest = null;
+    let lastYOffset = 0;
+
+    sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        const yOffset = Math.abs(rect.top);
+
+        if (closest === null || yOffset < lastYOffset) {
+            closest = section;
+            lastYOffset = yOffset;
+        }
+    });
+
+    return closest;
+}
+
+window.addEventListener('scroll', function() {
+    const visibleSection = getVisibleSection();
+    if (visibleSection) {
+        console.log(visibleSection.id);
+        const links = document.querySelectorAll(`nav a[href="#${visibleSection.id}"]`);
+        
+        if (links) {
+            
+            let navLinks = document.querySelectorAll('nav a[href^="#"]');
+            navLinks.forEach(link => {
+                link.classList.remove('border-skyblue');
+                link.classList.add('border-transparent');
+            });
+
+            links.forEach(link =>{
+                link.classList.remove('border-transparent');
+                link.classList.add('border-skyblue');
+            });
+        }
+    }
+});
+

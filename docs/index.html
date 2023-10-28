@@ -15,13 +15,13 @@
             <div class="flex h-16 justify-between">
                 <div class="flex px-2 lg:px-0">
                     <div class="flex flex-shrink-0 items-center">
-                        <img class="h-8 w-auto" src="img/SkylotusTransparent400x400.png" alt="Your Company">
+                        <a href="#"><img class="h-8 w-auto" src="img/SkylotusTransparent400x400.png" alt="Skylotus Studios"></a>
                     </div>
-                    <div class="hidden lg:ml-6 lg:flex lg:space-x-8">
-                        <a href="#about" class="inline-flex items-center border-b-2 border-skyblue px-1 pt-1 text-sm font-medium text-whitish hover:text-skyblue">About</a>
-                        <a href="#engine" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-whitish hover:border-skyblue hover:text-skyblue">Engine</a>
-                        <a href="#games" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-whitish hover:border-skyblue hover:text-skyblue">Games</a>
-                        <a href="#press" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-whitish hover:border-skyblue hover:text-skyblue">Press Kit</a>
+                    <div class="hidden lg:ml-6 lg:flex lg:space-x-8 text-sm font-medium text-whitish">
+                        <a href="#about" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 hover:border-skyblue hover:text-skyblue">About</a>
+                        <a href="#engine" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 hover:border-skyblue hover:text-skyblue">Engine</a>
+                        <a href="#games" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 hover:border-skyblue hover:text-skyblue">Games</a>
+                        <a href="#press" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 hover:border-skyblue hover:text-skyblue">Press Kit</a>
                     </div>
                 </div>
                 <div class="hidden lg:flex">
@@ -51,10 +51,10 @@
         <!-- Mobile menu, show/hide based on menu state. -->
         <div class="lg:hidden" id="mobile-menu">
             <div class="space-y-1 pb-3 pt-2">
-                <a href="#about" class="block border-l-4 border-gray-300 bg-skyblue py-2 pl-3 pr-4 text-base font-medium text-white hover:text-white">About</a>
-                <a href="#engine" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-whitish hover:border-gray-300 hover:bg-skyblue hover:text-white">Engine</a>
-                <a href="#games" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-whitish hover:border-gray-300 hover:bg-skyblue hover:text-white">Games</a>
-                <a href="#press" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-whitish hover:border-gray-300 hover:bg-skyblue hover:text-white">Press Kit</a>
+                <a href="#about" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-whitish hover:border-white hover:bg-skyblue hover:text-white">About</a>
+                <a href="#engine" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-whitish hover:border-white hover:bg-skyblue hover:text-white">Engine</a>
+                <a href="#games" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-whitish hover:border-white hover:bg-skyblue hover:text-white">Games</a>
+                <a href="#press" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-whitish hover:border-white hover:bg-skyblue hover:text-white">Press Kit</a>
                 <a href="#email" class="block bg-light text-whitish mt-2 mx-8 px-4 py-2 text-center hover:bg-skyblue hover:text-whitish transition duration-150 ease-in-out">
                     Sign Up
                 </a>
@@ -68,22 +68,17 @@
           </p>
           <a href="#email" class="flex-none bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900">Sign Up For Demo!</a>
           <a href="https://discord.gg/YAD6SzMF" class="flex-none bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900">Join Discord!</a>
+          <a href="#games" class="flex-none bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900">Steam Wishlist!</a>
         </div>
         <div class="flex flex-1 justify-end">
-          <button type="button" class="-m-3 p-3 focus-visible:outline-offset-[-4px]">
-            <span class="sr-only">Dismiss</span>
-            <svg class="h-5 w-5 text-gray-900" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
-            </svg>
-          </button>
         </div>
     </div>
-    <div class="relative">
-        <img src="img/SkylotusTextLogo2023.png" alt="logo" class="w-full">
+    <div id="logo" class="relative">
+        <div class="background-img w-full"></div>
         <div class="absolute top-0 left-0 w-full h-full opacity-30 bg-gradient-radial from-white to-black"></div>
     </div>
 
-    <div id="about" class="bg-dark py-24 sm:py-32">
+    <section id="about" class="bg-dark py-24 sm:py-32">
         <div class="mx-auto max-w-7xl px-6 text-center lg:px-8">
           <div class="mx-auto max-w-2xl">
             <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">&nbsp;&nbsp;About Us <span class="text-base font-semibold leading-7 text-skyblue">&nbsp;??</span></h2>
@@ -115,34 +110,39 @@
                 </li>
               </ul>
             </li>
-      
-            <!-- More people... -->
+
           </ul>
         </div>
-      </div>
+    </section>
       
-    <div class="relative" id="email">
-        <img src="img/topdowntoon.png" alt="background" class="w-full">
+    <section class="relative" id="email">
+        <div class="background-img w-full"></div>
         <div class="absolute top-0 left-0 w-full h-full bg-opacity-90 bg-black">
-            <div class="lg:mt-64 py-16 sm:py-24">
+            <div class="py-48 sm:py-64">
                 <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div class="relative isolate flex flex-col gap-10 overflow-hidden bg-dark px-6 py-24 shadow-2xl sm:px-24 xl:flex-row xl:items-center xl:py-32">
                     <h2 class="max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl xl:max-w-none xl:flex-auto">Get free game demos, <br/>early access, and updates!</h2>
-                    <form action="https://gmail.us21.list-manage.com/subscribe/post?u=3fe426fcb0812549621b9c282&amp;id=444de94214&amp;f_id=006ce4e6f0&c=?" method="post" class="w-full max-w-md">
-                    <div class="flex gap-x-4">
-                        <label for="email-address" class="sr-only">Email address</label>
-                        <input id="email-address" name="email" type="email" autocomplete="email" required class="placeholder-whitish min-w-0 flex-auto border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-skyblue sm:text-sm sm:leading-6" placeholder="Enter your email">
-                        <button type="submit" class="flex-none bg-light px-3.5 py-2.5 text-sm font-semibold text-whitish shadow-sm hover:bg-skyblue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Notify Me</button>
-                    </div>
-                    <p class="mt-4 text-sm leading-6 text-whitish">We promise to never spam you or steal your data. <br/>For more details, read our <a href="privacypolicy.html" class="font-bold text-skyblue">privacy&nbsp;policy</a>.</p>
+                    <form action="https://gmail.us21.list-manage.com/subscribe/post&c=?" method="POST" class="w-full max-w-md">
+                      <input type="hidden" name="u" value="3fe426fcb0812549621b9c282">
+                      <input type="hidden" name="id" value="444de94214">
+                      <div class="flex gap-x-4">
+                          <label for="MERGE1" class="sr-only">First Name</label>
+                          <input id="MERGE1" name="MERGE1" type="text" autocomplete="name" required class="placeholder-whitish min-w-0 flex-auto border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-skyblue sm:text-sm sm:leading-6" placeholder="First Name">
+                          <label for="MERGE0" class="sr-only">Email address</label>
+                          <input id="MERGE0" name="MERGE0" type="email" autocomplete="email" required class="placeholder-whitish min-w-0 flex-auto border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-skyblue sm:text-sm sm:leading-6" placeholder="Email">
+                          <button value="Subscribe" name="submit" type="submit" class="flex-none bg-light px-3.5 py-2.5 text-sm font-semibold text-whitish shadow-sm hover:bg-skyblue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Notify Me</button>
+                      </div>
+                      <p class="mt-4 text-sm leading-6 text-whitish">We promise to never spam you or steal your data. <br/>For more details, read our <a href="privacypolicy.html" class="font-bold text-skyblue">privacy&nbsp;policy</a>.</p>
+                      <input type="hidden" name="ht" value="c61802f1ec2acad375777cc65d62961db0816b3d:MTY5ODQyODk1MS4zMTY1">
+                      <input type="hidden" name="mc_signupsource" value="hosted">
                     </form>
                 </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="bg-dark py-24 sm:py-32" id="engine">
+    <section class="bg-dark py-24 sm:py-32" id="engine">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-2xl sm:text-center">
             
@@ -219,24 +219,24 @@
             </div>
           </dl>
         </div>
-    </div>
+    </section>
 
-    <div class="relative" id="games">
-        <img src="img/cards.png" alt="background" class="w-full">
+    <section class="relative" id="games">
+        <div class="background-img w-full"></div>
         <div class="absolute top-0 left-0 w-full h-full bg-opacity-90 bg-black flex flex-col justify-center items-center">
-            <div class="mx-auto max-w-2xl sm:text-center">
+            <div class="mx-auto max-w-2xl px-6 text-center">
             
-                <p class="mt-48 text-3xl font-bold tracking-tight text-white sm:text-4xl">Accounts of Abydos <span class="text-base font-semibold leading-7 text-skyblue">&nbsp;v0.1</span></p>
+                <p class="pt-48 sm:pt-64 text-3xl font-bold tracking-tight text-white sm:text-4xl">Accounts of Abydos <span class="text-base font-semibold leading-7 text-skyblue">&nbsp;v0.1</span></p>
                 
-                <p class="mt-6 text-lg leading-8 text-gray-300">This game is a work in progress. Please wishlist on steam!</p>
+                <p class="py-6 text-lg leading-8 text-gray-300">This game is a work in progress. <br/>Please wishlist on steam!</p>
             </div>
-            <div class="mt-6">
-                <iframe src="https://store.steampowered.com/widget/1723030/?t=This%20economy%20based%20card%20game%20pits%20your%20strategic%20skills%20against%20friends%2C%20family%2C%20and%20other%20players%20online!%20Just%20hop%20in%2C%20create%20or%20join%20a%20room%2C%20and%20fight%20to%20amass%20the%20mountains%20of%20gold%20contained%20in%20the%20Ancient%20Egyptian%20City%20of%20Abydos!" frameborder="0" width="646" height="190"></iframe>
+            <div class="responsive-iframe pt-6 pb-48 sm:pb-64">
+                <iframe src="https://store.steampowered.com/widget/1723030/?t=This%20economy%20based%20card%20game%20pits%20your%20strategic%20skills%20against%20all!%20Fight%20to%20amass%20the%20gold%20contained%20in%20the%20Ancient%20Egyptian%20City%20of%20Abydos!" frameborder="0" width="646" height="190"></iframe>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="bg-dark" id="press">
+    <section class="bg-dark" id="press">
         <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
           <div class="mx-auto max-w-2xl text-center">
             <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Press Kit <span class="text-base font-semibold leading-7 text-skyblue">&nbsp;v0.1</span></h2>
@@ -246,7 +246,7 @@
             </div>
           </div>
         </div>
-    </div>  
+    </section>  
       
     <footer class="bg-dark shadow-2xl">
         <div class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
